@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center>
+    <img id="1" src="ss1.png"></br>
+<button onclick="play()"><img src="play.png" height="100"></button><button onclick="pause()"><img src="pause.png" height="100"></button><button onclick="stop()"><img src="stop.png" height="100"></button>
+</center>
+</body>
+<script>
+    i=0
+    timer=undefined
+    function play(){
+        clearInterval(timer)
+        i=1
+        timer = setInterval(function () {
+        i=i+1
+        if(i===6){
+            i=1
+    }
+        if(i===1){
+            document.getElementById('1').src='ss1.png'
+        }
+        if(i===2){
+            document.getElementById('1').src='ss2.png'
+        }
+        if(i===3){
+            document.getElementById('1').src='ss3.png'
+        }
+         if(i===4){
+            document.getElementById('1').src='ss4.png'
+        }
+        if(i===5){
+        document.getElementById('1').src='ss5.png'
+        }
+        if(i===6){
+        document.getElementById('1').src="ss6.png"
+        }
+        },100)
+    }
+    function pause(){
+        clearInterval(timer)
+    }
+    function stop(){
+        clearInterval(timer)
+            i=0
+        document.getElementById('1').src='ss1.png'
+    }
+</script>
+</html>
